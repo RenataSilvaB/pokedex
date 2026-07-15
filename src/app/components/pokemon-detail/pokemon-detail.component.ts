@@ -13,7 +13,7 @@ import { AbilitiesListPipe } from '../../pipes/abilities.pipe';
     <div class="container" *ngIf="pokemon; else loader">
       <a routerLink="/" class="back-link">← Voltar</a>
 
-      <div class="detail-card" [style.background]="getTypeGradient(pokemon.types[0]?.type?.name)">
+      <div class="detail-card" [style.background]="getTypeGradient(pokemon.types[0]?.type?.name || 'normal')">
         <div class="detail-header">
           <div>
             <h1 class="detail-name">{{ pokemon.name }}</h1>

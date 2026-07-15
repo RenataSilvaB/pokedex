@@ -28,7 +28,7 @@ import { forkJoin } from 'rxjs';
           *ngFor="let pokemon of pokemons"
           [routerLink]="['/pokemon', pokemon.id]"
           class="pokemon-card"
-          [style.background]="getTypeGradient(pokemon.types[0]?.type?.name)"
+          [style.background]="getTypeGradient(pokemon.types[0]?.type?.name || 'normal')"
         >
           <span class="pokemon-id">#{{ pokemon.id.toString().padStart(3, '0') }}</span>
           <img
